@@ -30,6 +30,8 @@ Table.prototype = {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+  },
+  setSquarePlayer: function(x,y,player) {
+    this.matrix[y][x] = player;
   }
-
 }
