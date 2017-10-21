@@ -31,7 +31,9 @@ Table.prototype = {
     }
     return color;
   },
-  setSquarePlayer: function(x,y,player) {
-    this.matrix[y][x] = player;
+  setSquarePlayer: function(x,y,player,isNeutral) {
+    if (this.matrix[y][x] !== 0 || isNeutral) {
+      this.matrix[y][x] = player;
+    }
   }
 }
